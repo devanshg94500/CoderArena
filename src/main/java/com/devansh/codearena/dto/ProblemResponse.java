@@ -25,6 +25,7 @@ public class ProblemResponse {
     private String outputFormat;
     private String constraints;
     private List<String> tags;
+    private List<TestCaseResponse> testCases;
 
     private String starterCodeJava;
     private String starterCodeCpp;

@@ -159,8 +159,10 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     public ProblemResponse getProblemBySlug(String slug) {
+
         Problem problem = problemRepository.findBySlug(slug)
-                .orElseThrow(() -> new ProblemNotFoundException("Problem not found"));
+                .orElseThrow(() ->
+                        new RuntimeException("Problem not found"));
 
         return ProblemMapper.toProblemResponse(problem);
     }
